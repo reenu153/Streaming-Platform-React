@@ -1,0 +1,16 @@
+export const GENRE_LIST = [
+  "Drama",
+  "Comedy",
+  "Thriller",
+  "Action",
+  "Horror",
+  "Romance",
+  "Science-Fiction",
+  "Fantasy",
+  "Crime",
+  "Mystery",
+  "Anime",
+  "Children",
+  "Sports",
+  "Music",
+];
