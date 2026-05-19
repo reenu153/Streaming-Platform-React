@@ -29,7 +29,7 @@ The other apis for getting show details adn episode details are fetched on deman
 
 **Native fetch** was used over axios because of lack of requirement of complex request config in this use case 
 
-**Genre based organization**: Due to unavailability of fetching shows based on genres, the total list of shows are grouped and sorted based on genre on the client side
+**Genre based organization**: Due to unavailability of api for fetching shows based on genres, the total list of shows are grouped and sorted based on genre on the client side
 
 **Pagination was avoided** in the carousel since 250 shows are loaded on initial render — navigating that volume in a horizontal carousel is impractical UX-wise. 
 **Global search** covers discovery for any show not immediately visible.
