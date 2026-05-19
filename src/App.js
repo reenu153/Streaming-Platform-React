@@ -5,7 +5,7 @@ import { Home } from './pages/Home';
 import { ShowDetails } from './pages/ShowDetails';
 import { Header } from './components/Header';
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
     <div className="bg-[#09090B]">
       <Header />

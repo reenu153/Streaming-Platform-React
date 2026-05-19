@@ -51,7 +51,7 @@ export const Carousel = ({ title, items = [] }) => {
         }}
         className="flex gap-4  py-6 items-start scroll-smooth no-scrollbar"
       >
-        {items.map((show) => (
+        {items?.map((show) => (
           <div onClick={() => navigate(`shows/${show?.id}`)}>
             <ShowCard key={show?.id} show={show} />
           </div>

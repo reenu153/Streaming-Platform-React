@@ -18,7 +18,7 @@ export const Header = () => {
         <HomeIcon />
       </div>
 
-      <div className="text-lg font-bold tracking-wide">TV Explorer</div>
+      <div className="text-lg font-bold tracking-wide">StreamIt</div>
 
       <div className="flex items-center gap-4">
         <button

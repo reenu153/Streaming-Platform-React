@@ -1,4 +1,5 @@
 import { getShows } from './tvmaze';
+import { groupByGenre } from '../utils/fetchGenres';
 
 export const fetchShowsByGenre = async (pages = 3) => {
   const requests = Array.from({ length: pages }, (_, i) => getShows(i));
@@ -8,15 +9,3 @@ export const fetchShowsByGenre = async (pages = 3) => {
   return groupByGenre(allShows);
 };
 
-const groupByGenre = (shows) => {
-  return shows.reduce((acc, show) => {
-    if (!show.genres?.length) return acc;
-
-    show.genres.forEach((genre) => {
-      if (!acc[genre]) acc[genre] = [];
-      acc[genre].push(show);
-    });
-
-    return acc;
-  }, {});
-};
