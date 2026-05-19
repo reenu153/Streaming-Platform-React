@@ -53,7 +53,7 @@ export const Carousel = ({ title, items = [] }) => {
       >
         {items.map((show) => (
           <div onClick={() => navigate(`shows/${show?.id}`)}>
-            <ShowCard key={show.id} show={show} />
+            <ShowCard key={show?.id} show={show} />
           </div>
         ))}
       </div>

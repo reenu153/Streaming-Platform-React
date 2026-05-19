@@ -18,6 +18,7 @@ export const SearchModal = ({ open, onClose }) => {
     <div
       className="fixed inset-0 bg-black/90 z-50 flex flex-col items-center p-6"
       onClick={onClose}
+      data-testid="search-modal"
     >
       <div
         className="w-full max-w-2xl p-4 rounded-lg bg-[#1a1a1a] text-white flex justify-between items-center"
@@ -33,6 +34,7 @@ export const SearchModal = ({ open, onClose }) => {
         <span
           className="cursor-pointer text-[15px] font-semibold"
           onClick={handleClose}
+          data-testid="search-modal-close"
         >
           X
         </span>
@@ -59,6 +61,7 @@ export const SearchModal = ({ open, onClose }) => {
                 <span>⏱ {item?.show?.runtime || 'N/A'} min</span>
                 <span>⭐ {item?.show?.rating?.average || 'N/A'}</span>{' '}
               </div>
+
               <p className="text-[13px] text-gray-300 mt-2 line-clamp-2">
                 {item?.show?.summary
                   ? item?.show.summary.replace(/<[^>]*>/g, '')

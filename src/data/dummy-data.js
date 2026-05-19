@@ -1,45 +1,22 @@
-export const dashboardData = {
-  stats: {
-    totalBalance: 4820.5,
-    monthlySpending: 1245.9,
-    savedThisMonth: 520.0,
-  },
+export const mockShows = [
+  { id: 1, name: 'Show 1', image: { medium: 'https://example.com/1.jpg' }, rating: { average: 8.5 }, genres: ['Drama'] },
+  { id: 2, name: 'Show 2', image: { medium: 'https://example.com/2.jpg' }, rating: { average: 7.2 }, genres: ['Comedy'] },
+  { id: 3, name: 'Show 3', image: { medium: 'https://example.com/3.jpg' }, rating: { average: 9.0 }, genres: ['Thriller'] },
+];
 
-  recentExpenses: [
-    {
-      id: 1,
-      category: 'Groceries',
-      merchant: 'Albert Heijn',
-      amount: -64.2,
-      date: '2026-05-01',
-    },
-    {
-      id: 2,
-      category: 'Transport',
-      merchant: 'NS Train Ticket',
-      amount: -18.4,
-      date: '2026-04-30',
-    },
-    {
-      id: 3,
-      category: 'Dining',
-      merchant: 'Lunch Cafe',
-      amount: -14.9,
-      date: '2026-04-29',
-    },
-    {
-      id: 4,
-      category: 'Entertainment',
-      merchant: 'Netflix',
-      amount: -12.99,
-      date: '2026-04-28',
-    },
-    {
-      id: 5,
-      category: 'Salary',
-      merchant: 'Monthly Income',
-      amount: 2950.0,
-      date: '2026-04-27',
-    },
-  ],
+export const mockShow = {
+  name: 'Breaking Bad',
+  runtime: 47,
+  rating: { average: 9.5 },
+  image: { medium: 'https://example.com/poster.jpg' },
+  genres: ['Drama', 'Thriller', 'Crime'],
+  summary: '<p>A chemistry teacher turns to crime.</p>',
+};
+
+export const mockEpisode = {
+  number: 1,
+  name: 'Pilot',
+  runtime: 47,
+  image: { medium: 'https://example.com/episode.jpg' },
+  summary: '<p>The story begins.</p>',
 };

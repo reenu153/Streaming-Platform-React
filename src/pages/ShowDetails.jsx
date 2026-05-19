@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useMemo, useState } from 'react';
+
 import { getEpisodes, getShowById } from '../api/tvmaze';
 import { EpisodeCard } from '../components/EpisodeCard';
 import { getSeasonsList, groupEpisodesBySeason } from '../utils/episodes';
@@ -49,9 +50,9 @@ export const ShowDetails = () => {
           </div>
 
           <div className="flex flex-wrap gap-2 mt-3">
-            {show?.genres?.map((g, i) => (
+            {show?.genres?.map((genre, i) => (
               <span key={i} className="bg-white/10 px-2 py-1 rounded text-xs">
-                {g}
+                {genre}
               </span>
             ))}
           </div>
