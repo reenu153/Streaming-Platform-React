@@ -11,7 +11,7 @@ export const Carousel = ({ title, items = [] }) => {
 
   const scroll = (direction) => {
     const container = scrollRef.current;
-    const scrollAmount = 600;
+    const scrollAmount = 400;
 
     if (!container) return;
 
@@ -43,7 +43,13 @@ export const Carousel = ({ title, items = [] }) => {
       </div>
       <div
         ref={scrollRef}
-        className="flex gap-4 overflow-x-auto py-6 items-start scroll-smooth no-scrollbar"
+        style={{
+          overflowX: 'auto',
+          overflowY: 'visible',
+          paddingBottom: '160px',
+          marginBottom: '-160px',
+        }}
+        className="flex gap-4  py-6 items-start scroll-smooth no-scrollbar"
       >
         {items.map((show) => (
           <div onClick={() => navigate(`shows/${show?.id}`)}>
