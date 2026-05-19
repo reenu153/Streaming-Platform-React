@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { useSearch } from '../hooks/useSearch';
@@ -11,6 +11,10 @@ export const SearchModal = ({ open, onClose }) => {
     onClose();
     setQuery('');
   };
+
+  useEffect(() => {
+    setQuery("")
+  }, [open]);
 
   if (!open) return null;
 
