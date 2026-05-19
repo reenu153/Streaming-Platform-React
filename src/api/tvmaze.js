@@ -1,5 +1,17 @@
-import { ENDPOINTS } from "./endpoints";
-import { fetchClient } from "./fetch";
+import { ENDPOINTS } from "../constants/endpoints";
+import { cacheGet, cacheSet } from "../utils/cache";
+import { fetchClient } from "../utils/fetchClient";
+
+const withCache = async(url) => {
+  const key = url;
+  const stored = cacheGet(key);
+  if (stored) return stored;
+
+  const data = await fetchClient(url);
+  cacheSet(key, data);
+  return data;
+};
+
 
 export const searchShows = (query) => fetchClient(ENDPOINTS.search(query));
 
@@ -23,4 +35,4 @@ export const getCast = (id) => fetchClient(ENDPOINTS.cast(id));
 
 export const getCrew = (id) => fetchClient(ENDPOINTS.crew(id));
 
-export const getShows = async (page) => await fetchClient(ENDPOINTS.shows(page));
+export const getShows = async (page) => await withCache(ENDPOINTS.shows(page));

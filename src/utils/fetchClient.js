@@ -1,4 +1,4 @@
-import { BASE_URL } from "./endpoints";
+import { BASE_URL } from "../constants/endpoints";
 
 export const fetchClient = async (endpoint, options = {}) => {
     try {
