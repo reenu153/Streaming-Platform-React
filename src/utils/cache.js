@@ -19,6 +19,6 @@ export const cacheSet = (key, data) => {
   try {
     localStorage.setItem(key, JSON.stringify({ data, timestamp: Date.now() }));
   } catch (e) {
-    console.warn("Cache write failed:", e);
+    console.warn('Cache write failed:', e);
   }
 };

@@ -1,4 +1,3 @@
 export const extractGenres = (genreMap) => {
-    return Object.keys(genreMap).sort();
-  };
-  
+  return Object.keys(genreMap).sort();
+};

@@ -1,30 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-export const Banner = ({ images = [] }) => {
+export const Banner = ({ shows = [] }) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    if (!images.length) return;
+    if (!shows.length) return;
 
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 4000); 
+      setIndex((prev) => (prev + 1) % shows.length);
+    }, 4000);
 
     return () => clearInterval(interval);
-  }, [images]);
+  }, [shows]);
 
   return (
-    <div className="relative w-full h-[400px] overflow-hidden rounded-xl">
-      
-
-      {images.map((img, i) => (
+    <div className="relative w-full h-[350px] overflow-hidden rounded-xl">
+      {shows?.map((show, i) => (
         <img
           key={i}
-          src={img?.image?.original}
+          src={show?.image?.original}
           className={`
-            absolute inset-0 w-full h-full object-contain object-top
+            absolute inset-0 w-full h-full object-contain
             transition-opacity duration-700 ease-in-out
-            ${i === index ? "opacity-100" : "opacity-0"}
+            ${i === index ? 'opacity-100' : 'opacity-0'}
           `}
         />
       ))}
@@ -32,12 +30,8 @@ export const Banner = ({ images = [] }) => {
       <div className="absolute inset-0 bg-black/40" />
 
       <div className="absolute bottom-6 left-6 text-white z-10">
-        <h2 className="text-xl md:text-3xl font-bold">
-          Featured Shows
-        </h2>
-        <p className="text-sm text-gray-200">
-          Trending picks for you
-        </p>
+        <h2 className="text-xl md:text-3xl font-bold">Featured Shows</h2>
+        <p className="text-sm text-gray-200">Trending picks for you</p>
       </div>
     </div>
   );
