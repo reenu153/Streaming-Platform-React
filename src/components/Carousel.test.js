@@ -5,7 +5,7 @@ import { mockShows } from '../data/dummy-data';
 
 const renderCarousel = (props = {}) =>
   render(
-    <MemoryRouter>
+    <MemoryRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <Carousel title="Top Shows" items={mockShows} {...props} />
     </MemoryRouter>
   );

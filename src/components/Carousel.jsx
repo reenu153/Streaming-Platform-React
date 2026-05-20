@@ -24,7 +24,17 @@ export const Carousel = ({ title, items = [] }) => {
   return (
     <div className="w-full mb-8 relative overflow-visible px-5">
       <div className="flex justify-between items-center mb-2">
-        <h2 className="text-white text-xl font-bold">{title}</h2>
+        <div className="flex gap-6 items-center justify-center">
+          <h2 className="text-white text-xl font-bold">{title}</h2>
+          {items?.length > 4 && (
+            <button
+              onClick={() => navigate(`/genre/${title}`)}
+              className="text-white text-sm font-semibold hover:underline"
+            >
+              See more
+            </button>
+          )}
+        </div>
 
         <div className="flex gap-2">
           <button
@@ -52,8 +62,8 @@ export const Carousel = ({ title, items = [] }) => {
         className="flex gap-4  py-6 items-start scroll-smooth no-scrollbar"
       >
         {items?.map((show) => (
-          <div onClick={() => navigate(`shows/${show?.id}`)}>
-            <ShowCard key={show?.id} show={show} />
+          <div key={show?.id} onClick={() => navigate(`shows/${show?.id}`)}>
+            <ShowCard show={show} />
           </div>
         ))}
       </div>

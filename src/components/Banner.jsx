@@ -14,7 +14,7 @@ export const Banner = ({ shows = [] }) => {
   }, [shows]);
 
   return (
-    <div className="relative w-full h-[350px] overflow-hidden rounded-xl">
+    <div className="relative mb-4 w-full h-[350px] overflow-hidden rounded-xl bg-gradient-to-br from-[#3B0764] via-[#1A0A2E] to-[#09090B]">
       {shows?.map((show, i) => (
         <img
           key={i}
@@ -27,7 +27,7 @@ export const Banner = ({ shows = [] }) => {
         />
       ))}
 
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent" />
 
       <div className="absolute bottom-6 left-6 text-white z-10">
         <h2 className="text-xl md:text-3xl font-bold">Featured Shows</h2>

@@ -4,7 +4,7 @@ export const ShowCard = ({ show }) => {
   return (
     <div
       className="group relative cursor-pointer flex-shrink-0 w-[140px] sm:w-[160px] md:w-[180px] lg:w-[210px]
-bg-[#1a1a1a] rounded-xl transition-all duration-300 ease-in-out hover:shadow-xl hover:z-50 hover:scale-[1.03]
+bg-[#1a1a1a] rounded-[4px] transition-all duration-300 ease-in-out hover:shadow-xl hover:z-50 hover:scale-[1.03]
       "
     >
       <img
@@ -36,13 +36,13 @@ transition-opacity duration-300 ease-in-out bg-[#1a1a1a] rounded-b-xl px-2 pb-3 
       >
         <div className="flex flex-wrap gap-1 mt-1">
           {show?.genres?.slice(0, 3).map((genre, i) => (
-            <span key={i} className="text-[12px] bg-white/10 px-1 rounded">
+            <span key={i} className="text-[12px] text-white bg-white/10 px-1 rounded">
               {genre}
             </span>
           ))}
         </div>
 
-        <p className="text-[13px] text-gray-300 mt-2 line-clamp-4">
+        <p className="text-[13px] text-white mt-2 line-clamp-4">
           {show?.summary
             ? show.summary.replace(/<[^>]*>/g, '')
             : 'No description available.'}

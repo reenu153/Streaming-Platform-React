@@ -36,6 +36,10 @@ The other apis for getting show details adn episode details are fetched on deman
 
 **No lazy loading and skeleton loader** in carousels because 250 shows loaded upfront on initial render and cached and image size is negligable in this scenario.
 
-
+**JavaScript over TypeScript**
+TypeScript was not listed as a requirement in the assessment brief. 
+JavaScript was chosen to avoid over-engineering the solution and to focus 
+on delivering clean, well-structured, and thoroughly tested code within 
+the time constraints of the assessment.
 
 
