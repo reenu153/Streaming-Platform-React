@@ -30,7 +30,7 @@ export const ShowDetails = () => {
   useEffect(() => {
     fetchShowDetails();
     fetchShowEpisodes();
-  }, []);
+  }, [id]);
 
   return (
     <div className="bg-background-base overflow-auto">
