@@ -43,3 +43,14 @@ on delivering clean, well-structured, and thoroughly tested code within
 the time constraints of the assessment.
 
 
+
+
+## Features
+
+- **Genre-based browsing** — shows grouped by genre in horizontal scrollable carousels
+- **Show detail page** — full show info including cast, episodes by season, and ratings
+- **Search** — real-time search with suggestions dropdown, debounced to avoid excessive API calls
+- **See more** — dedicated genre page showing all shows for a selected genre
+- **Featured banner** — auto-cycling banner showcasing selected shows
+
+
