@@ -18,7 +18,7 @@ const GenrePage = () => {
       {loading ? (
         <p className="text-[#52525B]">Loading...</p>
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+        <div className="flex flex-wrap gap-10">
           {shows?.map((show) => (
             <div key={show?.id} onClick={() => navigate(`/shows/${show?.id}`)}>
             <ShowCard key={show?.id} show={show} />
