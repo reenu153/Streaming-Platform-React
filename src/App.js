@@ -8,7 +8,7 @@ import { Header } from './components/Header';
 
 const Layout = () => {
   return (
-    <div className="bg-[#09090B]">
+    <div>
       <Header />
       <Outlet />
     </div>

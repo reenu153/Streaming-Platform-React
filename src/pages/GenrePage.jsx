@@ -10,7 +10,7 @@ const GenrePage = () => {
   const shows = genreMap[genre] || [];
 
   return (
-    <div className="p-6 bg-[#09090B] min-h-screen">
+    <div className="p-6">
       <h1 className="text-white text-2xl font-bold mb-10 border-l-4 border-[#5B21B6] pl-3">
         {genre}
       </h1>

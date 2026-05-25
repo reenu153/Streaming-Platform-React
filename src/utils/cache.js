@@ -1,4 +1,4 @@
-const TTL = 120 * 60 * 1000; // 1 hour
+const TTL = 120 * 60 * 1000;
 
 export const cacheGet = (key) => {
   try {
